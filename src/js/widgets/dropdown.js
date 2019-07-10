@@ -8,6 +8,7 @@ const Dropdown = (props) => {
         < div class="dropdown" >
             <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {props.dropdowntext}
+                {/*<i class="fas fa-chevron-down"></i>*/}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 {dropdownitems}

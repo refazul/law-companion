@@ -21,6 +21,8 @@ module.exports = {
     resolve: {
         alias:{
             'dropdown': path.resolve(__dirname, 'src', 'js', 'widgets', 'dropdown.js'),
+            'navbar': path.resolve(__dirname, 'src', 'js', 'widgets', 'navbar.js'),
+            'causelist': path.resolve(__dirname, 'src', 'js', 'widgets', 'causelist.js'),
         }
     }
 };

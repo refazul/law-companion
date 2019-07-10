@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"compilecss": "sass src/scss/style.scss:public/css/style.css",
+		"compilecss": "sass --watch src/scss/style.scss:public/css/style.css",
 		"compilejs": "webpack --watch"
 	},
 	"repository": {
