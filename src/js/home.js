@@ -29,7 +29,7 @@ ReactDOM.render(
                         </div>
                     </div>
                 </div>
-                <div className="center">
+                <div className="center causelist-wrapper">
                     <Causelist {...causelist_data} />
                 </div>
             </div>

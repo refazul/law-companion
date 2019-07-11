@@ -51,6 +51,7 @@ export const causelist_data = {
             'causelist_courtno': 'COURT NO',
             'causelist_heading': 'HEADING',
             'causelist_who': 'FOR',
+            'type': 'causelistheaderitem',
         },
         {
             'causelist_itemno': '73',
@@ -59,6 +60,8 @@ export const causelist_data = {
             'causelist_courtno': 'Annex 33',
             'causelist_heading': 'Motion',
             'causelist_who': 'Petitioner',
+            'type': 'evenitem',
+            
         },
         {
             'causelist_itemno': '73',
@@ -67,6 +70,7 @@ export const causelist_data = {
             'causelist_courtno': 'Annex 33',
             'causelist_heading': 'Motion',
             'causelist_who': 'Petitioner',
+            'type': 'evenitem',
         },
         {
             'causelist_itemno': '73',
@@ -75,6 +79,43 @@ export const causelist_data = {
             'causelist_courtno': 'Annex 33',
             'causelist_heading': 'Motion',
             'causelist_who': 'Petitioner',
+            'type': 'evenitem',
+        },
+        {
+            'causelist_itemno': '73',
+            'causelist_caseno': 'WRIT PETITION 578/2019',
+            'causelist_parties': 'GOLAM MAOLA VS Govt of Bangladesh',
+            'causelist_courtno': 'Annex 33',
+            'causelist_heading': 'Motion',
+            'causelist_who': 'Petitioner',
+            'type': 'evenitem',
+        },
+        {
+            'causelist_itemno': '73',
+            'causelist_caseno': 'WRIT PETITION 578/2019',
+            'causelist_parties': 'GOLAM MAOLA VS Govt of Bangladesh',
+            'causelist_courtno': 'Annex 33',
+            'causelist_heading': 'Motion',
+            'causelist_who': 'Petitioner',
+            'type': 'evenitem',
+        },
+        {
+            'causelist_itemno': '73',
+            'causelist_caseno': 'WRIT PETITION 578/2019',
+            'causelist_parties': 'GOLAM MAOLA VS Govt of Bangladesh',
+            'causelist_courtno': 'Annex 33',
+            'causelist_heading': 'Motion',
+            'causelist_who': 'Petitioner',
+            'type': 'evenitem',
+        },
+        {
+            'causelist_itemno': '73',
+            'causelist_caseno': 'WRIT PETITION 578/2019',
+            'causelist_parties': 'GOLAM MAOLA VS Govt of Bangladesh',
+            'causelist_courtno': 'Annex 33',
+            'causelist_heading': 'Motion',
+            'causelist_who': 'Petitioner',
+            'type': 'evenitem',
         },
         
         

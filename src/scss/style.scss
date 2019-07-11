@@ -4,11 +4,35 @@
 @import "fontawesome/brands.scss";
 @import "fontawesome/regular.scss";
 
+$lightblue: #0099CC;
+$black: #333333;
+
+.bold{
+    font-weight: bold;
+}
 .center{
     text-align: center;
 }
 
 .causelist-wrapper{
+    background-color: #CCFFFF;
+    color: $black;
     margin-top: 20px;
-    background-color: lightblue;
+
+}
+.causelistitem-wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    color: $black;
+}
+.causelistheaderitem-style{
+    background-color: $black;
+    color: white;
+    font-weight: bold;
+}
+.evenitem-style{
+    background-color: #CCFFFF;
+    color: $black;
+    font-weight: normal;
 }
