@@ -34,10 +34,19 @@ ReactDOM.render(
                 <div className="center causelist-wrapper">
                     <Causelist {...causelist_data} />
                 </div>
+                <div>
+                    <div className="inline">
+                        <div>Total 9 cases found</div>
+                        <div>Cause list generated</div>
+                    </div>
+                    <div className="inline floatright">
+                        <button type="button" class="btn btn-info"><i class="fas fa-print"></i>&nbsp;&nbsp;Print Case List</button>
+                    </div>
+                </div>
 
             </div>
             <div className="col-sm-3 col-md-3 col-lg-3 sidebar2-wrapper">
-                <Accordion {...accordion_data}/>
+                <Accordion {...accordion_data} />
                 <div className="sidebarnav-wrapper">
                     <div className="sidebarnavitem">Contact</div>
                     <div className="sidebarnavitem">Sercvices</div>
@@ -47,10 +56,7 @@ ReactDOM.render(
             </div>
 
         </div>
-        <div>
-            <div>Total 9 cases found</div>
-            <div>Cause list generated</div>
-        </div>
+
         <div className="footer-wrapper">
             <Footer {...footer_data} />
         </div>

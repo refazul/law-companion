@@ -14,13 +14,13 @@ const Causelistitem = (props) => {
     }
 
     return (
-        <div className={"row causelistitem-wrapper " + (props.evenitem == "yes" ? " evenitem-style " : "" ) + (props.evenitem == "no" ? " unevenitem-style " : "" ) + (props.headeritem == "yes" ? " causelistheaderitem-style " : "" )}>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_itemno}</div>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_caseno}</div>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_parties}</div>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_courtno}</div>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_heading}</div>
-            <div className="col-sm-2 col-md-2 col-lg-2">{props.causelist_who}</div>
+        <div className={"causelistitem-wrapper displaytable" + (props.evenitem == "yes" ? " evenitem-style " : "" ) + (props.evenitem == "no" ? " unevenitem-style " : "" ) + (props.headeritem == "yes" ? " causelistheaderitem-style " : "" )}>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_itemno}</div>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_caseno}</div>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_parties}</div>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_courtno}</div>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_heading}</div>
+            <div className="causelistcolumn tablecell verticalmiddle">{props.causelist_who}</div>
             
         </div>
 
@@ -30,7 +30,7 @@ const Causelistitem = (props) => {
 const Causelist = (props) => {
     const listItems = props.items.map((item, index, array) =>
     
-        <Causelistitem {...item} headeritem={index == array.length == 0 ? "yes" : "no"} evenitem={index == array.length%2 == 0 ? "yes" : "no"}/>
+        <Causelistitem {...item} headeritem={index == 0 ? "yes" : "no"} evenitem={index %2 == 0 ? "yes" : "no"} />
     );
     return (
         <div className="">

@@ -6,7 +6,7 @@ import React from 'react';
 const Quicklink3 = () => {
 
     return (
-        <div className="sidebaritem-wrapper" style={{ border: "1px solid lightgray" }}>
+        <div className="sidebaritem-wrapper quicklink3-wrapper" style={{ border: "1px solid lightgray" }}>
             <div className="sidebarheader">Quicknote</div>
 
 
