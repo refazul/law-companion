@@ -7,6 +7,7 @@ module.exports = {
     },
     entry      : {
         'home' : './src/js/home.js',
+        'home2' : './src/js/home2.js',
     },
     module: {
         rules: [
@@ -27,6 +28,8 @@ module.exports = {
             'quicklink2': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink2.js'),
             'quicklink3': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink3.js'),
             'footer': path.resolve(__dirname, 'src', 'js', 'widgets', 'footer.js'),
+
+            'accordion': path.resolve(__dirname, 'src', 'js', 'widgets', 'accordion.js'),
         }
     }
 };

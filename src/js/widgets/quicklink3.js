@@ -14,7 +14,7 @@ const Quicklink3 = () => {
                 <div className="quicklink3form">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write a quick note" />
                 </div>
-                <button type="button" class="btn btn-info">Save</button>
+                <button type="button" className="btn btn-info quicklink3-button">Save</button>
             </div>
         </div>
 

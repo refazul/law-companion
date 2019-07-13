@@ -7,6 +7,11 @@
 $lightblue: #0099CC;
 $black: #333333;
 
+body{
+    .a{
+    color: white;
+    }
+}
 .testback{
     background-color: $lightblue;
 }
@@ -100,9 +105,44 @@ $black: #333333;
     padding-left: 10px;
     padding-right: 10px;
 }
+.quicklink3-button{
+    width: 100%;
+}
 .footer-wrapper{
     background-color: $black;
     color: White;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+
+/////////////////////HOME2 START///////////////////////
+
+.sidebar2-wrapper{
+    background-color: $black;
+    color:white;
+}
+.infotext-wrapper{
+    color:white;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.accordion-wrapper{
+    color:$black;
+}
+.accordion-style{
+    background-color: $black;
+    border: none;
+    color:white;
+}
+.sidebarnav-wrapper{
+    
+    border-top: 1px solid white;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.sidebarnavitem{
+    color:lightgray;
+    font-size: 1.2em;
+    margin-top: 10px;
 }

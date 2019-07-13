@@ -187,6 +187,75 @@ export const footer_data = {
             'column': '6',
             'footertext': 'Designed Developed and Maintained by AllSpark Soft',
         },
-       
+
     ]
 }
+export const accordion_data = {
+
+    'infotext1': 'Good Morning Khaled',
+    'infotext2': 'Today is Tuesday',
+    'items': [
+        {
+
+            'id': 'collapse1',
+            'accrodionheader': 'Daily Cause List',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+        {
+
+            'id': 'collapse2',
+            'accrodionheader': 'Extension Tracker',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+        {
+
+            'id': 'collapse3',
+            'accrodionheader': 'Case Manager',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+        {
+
+            'id': 'collapse4',
+            'accrodionheader': 'Mention Slip Manager',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+        {
+
+            'id': 'collapse5',
+            'accrodionheader': 'Draft Manager',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+        {
+
+            'id': 'collapse6',
+            'accrodionheader': 'Notes',
+            'text1': 'Todays Causelist',
+            'text2': 'Tuesday',
+            'text3': 'Tomorrows Cause List',
+            'text4': 'Wednesday',            
+            'textbody': 'Cause list of specific date',
+        },
+
+    ]
+}
+
