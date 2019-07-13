@@ -4,8 +4,8 @@ import React from 'react';
 const Quicklinkitem = (props) => {
     return (
         <div className={(props.lastitem == "yes" ? " lastitem-style " : "") + " quicklinkitem-wrapper"}>
-            <div className="inline">
-                <i className={props.fontawesome + " center"}></i>
+            <div className={"inline " + props.circle}>
+                <i className={props.fontawesome +  " center"}></i>
             </div>
             <div className="inline ">
                 <div className="block quicklinktext">

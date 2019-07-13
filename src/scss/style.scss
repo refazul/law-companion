@@ -9,8 +9,9 @@ $black: #333333;
 $lightcyan: #CCFFFF;
 
 body{
-    .a{
+    a{
     color: white;
+    text-decoration: none;
     }
 }
 .tablecell{
@@ -61,15 +62,18 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     color: $black;
+    width: 100%;
 }
-.causelistcolumn{
-    width: 16.67%;
+.causelistcolumnsmall{
+    width: 15%;
+}
+.causelistcolumnlarge{
+    width: 20%;
 }
 .causelistheaderitem-style{
     background-color: $black !important;
     color: white !important;
     font-weight: bold !important;
-    width: 100%;
 }
 .evenitem-style{
     background-color: white;
@@ -103,6 +107,18 @@ body{
     padding-bottom: 10px;
     padding-top: 10px;
     margin-left: 20px;
+}
+.firstcircle{
+    color:red;
+    vertical-align: top;
+    margin-top:5px;
+    margin-right:5px;
+}
+.secondcircle{
+    color:green;
+    vertical-align: top;
+    margin-top:5px;
+    margin-right:5px;
 }
 .quicklinktext{
     font-size: 1.2em;
@@ -156,11 +172,20 @@ body{
 }
 .accordion-wrapper{
     color:$black;
+    margin-bottom: 10px;
 }
 .accordion-style{
     background-color: $black;
     border: none;
     color:white;
+}
+.accordionheader{
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1.5em;
+    background-color: $black;
+    
 }
 .sidebarnav-wrapper{
     

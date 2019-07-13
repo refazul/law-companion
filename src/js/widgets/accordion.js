@@ -5,14 +5,13 @@ const Accordionitem = (props) => {
 
         <div className="card accordion-style">
 
-            <div className="card-header" id="headingOne">
-                <h2 className="mb-0">
-                    <button style={{ width: '100%' }} className="btn btn-link " type="button" data-toggle="collapse" data-target={'#' + props.id} aria-expanded="true" aria-controls="collapseOne">
+            <div className="" id="headingOne">
+                
+                    <div style={{ width: '100%' }}  type="button" data-toggle="collapse" data-target={'#' + props.id} aria-expanded="true" aria-controls="collapseOne">
                         <div className="">
-                            <div className=""><a className="colored-link" href="#">{props.accrodionheader}</a></div>
+                            <div className="accordionheader"><a className="colored-link" href="#">{props.accrodionheader}</a></div>
                         </div>
-                    </button>
-                </h2>
+                    </div>
             </div>
 
             <div id={props.id} className="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">

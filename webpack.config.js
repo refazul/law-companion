@@ -28,6 +28,7 @@ module.exports = {
             'quicklink2': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink2.js'),
             'quicklink3': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink3.js'),
             'footer': path.resolve(__dirname, 'src', 'js', 'widgets', 'footer.js'),
+            'topbanner': path.resolve(__dirname, 'src', 'js', 'widgets', 'topbanner.js'),
 
             'accordion': path.resolve(__dirname, 'src', 'js', 'widgets', 'accordion.js'),
         }

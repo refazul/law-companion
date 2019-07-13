@@ -128,11 +128,13 @@ export const sidebar1_data = {
     'items': [
         {
             'fontawesome': 'fas fa-circle',
+            'circle': 'firstcircle',
             'text1': 'Todays Cause List',
             'text2': 'Tuesday',
         },
         {
             'fontawesome': 'fas fa-circle',
+            'circle': 'secondcircle',
             'text1': 'Tomorrows Cause List',
             'text2': 'Wednesday',
         },
