@@ -28,7 +28,7 @@ export const navbar_data = {
     ]
 }
 export const sortby_data = {
-    "dropdowntext":"Sort by: Item No.",
+    "dropdowntext": "Sort by: Item No.",
     'items': [
         {
             'text': 'Date',
@@ -39,10 +39,11 @@ export const sortby_data = {
         {
             'text': 'Type',
         },
-        
-]}
+
+    ]
+}
 export const causelist_data = {
-    "dropdowntext":"Sort by: Item No.",
+    "dropdowntext": "Sort by: Item No.",
     'items': [
         {
             'causelist_itemno': 'ITEM NO',
@@ -61,7 +62,7 @@ export const causelist_data = {
             'causelist_heading': 'Motion',
             'causelist_who': 'Petitioner',
             'type': 'evenitem',
-            
+
         },
         {
             'causelist_itemno': '73',
@@ -117,7 +118,75 @@ export const causelist_data = {
             'causelist_who': 'Petitioner',
             'type': 'evenitem',
         },
-        
-        
-        
-]}
+
+
+
+    ]
+}
+export const sidebar1_data = {
+
+    'items': [
+        {
+            'fontawesome': 'fas fa-circle',
+            'text1': 'Todays Cause List',
+            'text2': 'Tuesday',
+        },
+        {
+            'fontawesome': 'fas fa-circle',
+            'text1': 'Tomorrows Cause List',
+            'text2': 'Wednesday',
+        },
+    ]
+}
+export const sidebar2_data = {
+
+    'items': [
+        {
+            'text1': 'Civil Revision',
+            'text2': 'Expired on 8th',
+        },
+        {
+            'text1': 'Criminal Misc',
+            'text2': 'Expiring on 18th',
+        },
+        {
+            'text1': 'Civil Revision',
+            'text2': 'Expired on 8th',
+        },
+    ]
+}
+export const sidebar3_data = {
+
+    'items': [
+        {
+            'text1': 'Civil Revision',
+            'text2': 'Expired on 8th',
+        },
+        {
+            'text1': 'Criminal Misc',
+            'text2': 'Expiring on 18th',
+        },
+        {
+            'text1': 'Civil Revision',
+            'text2': 'Expired on 8th',
+        },
+    ]
+}
+export const footer_data = {
+
+    'items': [
+        {
+            'column': '3',
+            'footertext': '@Copyright 2019',
+        },
+        {
+            'column': '3',
+            'footertext': 'About | Services | Fee',
+        },
+        {
+            'column': '6',
+            'footertext': 'Designed Developed and Maintained by AllSpark Soft',
+        },
+       
+    ]
+}

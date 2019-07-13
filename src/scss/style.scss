@@ -7,15 +7,36 @@
 $lightblue: #0099CC;
 $black: #333333;
 
+.testback{
+    background-color: $lightblue;
+}
+.floatright{
+    float: right;
+}
+.floatleft{
+    float: left;
+}
 .bold{
     font-weight: bold;
+}
+.textleft{
+    text-align: left;
+}
+.textright{
+    text-align: right;
 }
 .center{
     text-align: center;
 }
+.inline{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
 
 .causelist-wrapper{
-    background-color: #CCFFFF;
+    background-color: $lightblue;
     color: $black;
     margin-top: 20px;
 
@@ -32,7 +53,56 @@ $black: #333333;
     font-weight: bold;
 }
 .evenitem-style{
-    background-color: #CCFFFF;
+    background-color: white;
     color: $black;
     font-weight: normal;
+}
+.sidebar-wrapper{
+    background-color: #CCFFFF;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.sidebarheader{
+    background-color: $black;
+    color: white;
+    font-size: 1.5em;
+    padding-left:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+
+}
+.sidebaritem-wrapper{
+    background-color: white;
+    
+}
+.quicklinkitem-wrapper{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.quicklinktext{
+    font-size: 1.2em;
+}
+.quicklinksecondtext{
+    font-size: 1em;
+}
+.quicklink2item-wrapper{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.quicklink2-button{
+    margin-top: 10px;
+}
+.quicklink3form{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer-wrapper{
+    background-color: $black;
+    color: White;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

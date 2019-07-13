@@ -23,6 +23,10 @@ module.exports = {
             'dropdown': path.resolve(__dirname, 'src', 'js', 'widgets', 'dropdown.js'),
             'navbar': path.resolve(__dirname, 'src', 'js', 'widgets', 'navbar.js'),
             'causelist': path.resolve(__dirname, 'src', 'js', 'widgets', 'causelist.js'),
+            'quicklink': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink.js'),
+            'quicklink2': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink2.js'),
+            'quicklink3': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink3.js'),
+            'footer': path.resolve(__dirname, 'src', 'js', 'widgets', 'footer.js'),
         }
     }
 };
