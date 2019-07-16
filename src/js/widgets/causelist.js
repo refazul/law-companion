@@ -11,22 +11,22 @@ const Causelistitem = (props) => {
         <div className="unevenitem-style"></div>
     }
 
-    var parts = props.causelist_parties.split(' VS ');
+    var parts = props.case_parties.split(' vs ');
     var party1 = parts[0];
     var party2 = parts[1];
     
     return (
         <div className={"causelistitem-wrapper displaytable" + (props.evenitem == "yes" ? " evenitem-style " : "") + (props.evenitem == "no" ? " unevenitem-style " : "") + (props.headeritem == "yes" ? " causelistheaderitem-style " : "")}>
-            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.causelist_itemno}</div>
-            <div className="causelistcolumnlarge tablecell verticalmiddle">{props.causelist_caseno}</div>
+            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.case_sl}</div>
+            <div className="causelistcolumnlarge tablecell verticalmiddle">{props.case_number}</div>
             <div className="causelistcolumnlarge tablecell verticalmiddle ">
                 <div className="block">{party1}</div>
                 <div className="block">{(party2 ? 'VS' : '')}</div>
                 <div className="block">{party2}</div>
             </div>
-            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.causelist_courtno}</div>
-            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.causelist_heading}</div>
-            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.causelist_who}</div>
+            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.court_name}</div>
+            <div className="causelistcolumnsmall tablecell verticalmiddle">{props.case_heading}</div>
+            <div className="causelistcolumnsmall tablecell verticalmiddle">FOR</div>
 
         </div>
 
