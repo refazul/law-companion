@@ -7,7 +7,6 @@ module.exports = {
     },
     entry      : {
         'home' : './src/js/home.js',
-        'home2' : './src/js/home2.js',
     },
     module: {
         rules: [
