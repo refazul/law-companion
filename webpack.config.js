@@ -6,7 +6,7 @@ module.exports = {
         path   : path.resolve(__dirname, 'public', 'js')
     },
     entry      : {
-        'home' : './src/js/home.js',
+        'app' : './src/js/app.js',
     },
     module: {
         rules: [
