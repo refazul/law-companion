@@ -42,6 +42,7 @@ const Navbar = (props) => {
                     {navitems}
                 </ul>
             </div>
+            {props.xyz}
         </nav>
 
     );

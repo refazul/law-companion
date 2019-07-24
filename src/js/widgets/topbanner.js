@@ -19,6 +19,7 @@ class Topbanner extends React.Component {
     render() {
         return (
             <div className="row">
+                <input onKeyUp={(e)=>{var newvalue = e.target.value; this.props.m.setState({toptext: newvalue})}} />
                 <div className="info col-sm-9 col-md-9 col-lg-9">
                     <div>Good Morning Khaled</div>
                     <div>Today is Tuesday, 09 July,2019</div>

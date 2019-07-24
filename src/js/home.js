@@ -15,20 +15,22 @@ import Topbanner from 'topbanner';
 import { navbar_data, sidebar1_data, causelist_data, sidebar2_data, sidebar3_data, footer_data } from './data';
 
 class Home extends React.Component {
-    y() {
-        
+    constructor(props) {
+        super(props);
+        this.state = {
+            toptext: 'X'
+        }
     }
     render() {
         return (
             <div>
                 <div className="header">
-                    <Navbar {...navbar_data} />
+                    <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
                 <div className="container"> 
-
                     <div className="row">
                         <div className="mainbar-wrapper">
-                            <Topbanner />
+                            <Topbanner m={this}/>
                             <div className="center causelist-wrapper">
                                 <Causelist {...causelist_data} />
                             </div>
@@ -54,6 +56,7 @@ class Home extends React.Component {
                         <Footer {...footer_data} />
                     </div>
                 </div>
+                
             </div>
         )
     }
