@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
+var input_value;
+var input_numbers = [];
+var i;
 
 
 ReactDOM.render(
@@ -22,19 +25,25 @@ function createDiv(id, className) {
     div.className = className;
     return div;
 }
+function summation(list) {
+    var sum =0;
+    for (i = 0; i < list.length; i++) {
+        sum = sum + parseInt(list[i]);
+    }
+    return sum;
+}
 
 function appendDiv() {
 
-    var input_value = document.getElementById("text_holder").value;
-    var input_numbers = input_value.match(/\d+/g);
-
-
+    input_value = document.getElementById("text_holder").value;
+    input_numbers.push(input_value.match(/\d+/g));
 
     if (input_value == "") {
 
     } else {
         var x = createDiv("input_id", "input_class");
-        x.textContent = input_numbers;
+
+        x.textContent = summation(input_numbers);
         document.getElementById("inputs_holder").appendChild(x);
         document.getElementById("text_holder").value = "";
     }
@@ -45,3 +54,26 @@ function appendDiv() {
 
 document.getElementById("clickMe").onclick = appendDiv;
 
+function factorial(n){
+    var total = 1;
+    for(i=1; i<=n;i++){
+        total = total * i;
+    }
+    return total;
+}
+
+function reverseString(xyz) {
+    xyz=xyz+'';
+    return xyz.split("").reverse().join("");
+}
+
+function isPalindrome(xyz){
+
+    if(reverseString(xyz) == xyz){
+        console.log(true);
+    }
+    else{
+        console.log(false);
+    }
+
+}
