@@ -8,6 +8,7 @@ module.exports = {
     },
     entry      : {
         'app' : './src/js/app.js',
+        'tasks' : './src/js/tasks.js',
     },
     module: {
         rules: [
