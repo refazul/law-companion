@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import $ from 'jquery';
 
 import Navbar from 'navbar';
 import Dropdown from 'dropdown';
@@ -11,6 +9,8 @@ import Quicklink2 from 'quicklink2';
 import Quicklink3 from 'quicklink3';
 import Footer from 'footer';
 import Topbanner from 'topbanner';
+import Tictactoe from 'tictactoe';
+
 
 import { navbar_data, sidebar1_data, causelist_data, sidebar2_data, sidebar3_data, footer_data } from './data';
 
@@ -27,6 +27,7 @@ class Home extends React.Component {
                 <div className="header">
                     <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
+                <Tictactoe/>
                 <div className="container"> 
                     <div className="row">
                         <div className="mainbar-wrapper">

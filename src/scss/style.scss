@@ -211,3 +211,31 @@ body{
     padding-left: 0px;
     padding-right: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////TICTACTOE//////////////////
+
+
+
+.box{
+    width: 25px;
+    height: 25px;
+    background-color: #0099CC;
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.box-row{
+    clear: both;
+}
