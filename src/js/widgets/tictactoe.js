@@ -20,7 +20,42 @@ class Tictactoe extends React.Component {
         }
 
     }
+    reset() {
+        var box1, box2, box3, box4, box5, box5, box6, box7, box8, box9;
+        box1 = box2 = box3 = box4 = box5 = box5 = box6 = box7 = box8 = box9 = "";
+        var counter = 0;
+        this.setState((state) => {
+            return Object.assign({}, state, { box1, box2, box3, box4, box5, box6, box7, box8, box9, counter });
+        });
+    }
 
+    victory() {
+        if (this.state.box1 != '' && this.state.box1 == this.state.box2 && this.state.box1 == this.state.box3) {
+            return true;
+        }
+        if (this.state.box4 != '' && this.state.box4 == this.state.box5 && this.state.box4 == this.state.box6) {
+            return true;
+        }
+        if (this.state.box7 != '' && this.state.box7 == this.state.box8 && this.state.box7 == this.state.box9) {
+            return true;
+        }
+        if (this.state.box1 != '' && this.state.box1 == this.state.box4 && this.state.box1 == this.state.box7) {
+            return true;
+        }
+        if (this.state.box2 != '' && this.state.box2 == this.state.box5 && this.state.box2 == this.state.box8) {
+            return true;
+        }
+        if (this.state.box3 != '' && this.state.box3 == this.state.box6 && this.state.box3 == this.state.box9) {
+            return true;
+        }
+        if (this.state.box1 != '' && this.state.box1 == this.state.box5 && this.state.box1 == this.state.box9) {
+            return true;
+        }
+        if (this.state.box3 != '' && this.state.box3 == this.state.box5 && this.state.box3 == this.state.box7) {
+            return true;
+        }
+        return false;
+    }
     boxOnClick(number) {
         var box1 = this.state.box1, box2 = this.state.box2, box3 = this.state.box3,
             box4 = this.state.box4, box5 = this.state.box5, box6 = this.state.box6,
@@ -29,7 +64,7 @@ class Tictactoe extends React.Component {
         var increment = false;
         var xoro = "X";
 
-        if(counter%2 == 1){
+        if (counter % 2 == 1) {
             xoro = "O";
         }
 
@@ -39,70 +74,78 @@ class Tictactoe extends React.Component {
                 increment = true;
                 box1 = xoro;
             }
-            
+
         } else if (number == 2) {
             if (box2 == '') {
                 increment = true;
                 box2 = xoro;
             }
-            
+
         }
         else if (number == 3) {
             if (box3 == '') {
                 increment = true;
                 box3 = xoro;
             }
-            
+
         }
         else if (number == 4) {
             if (box4 == '') {
                 increment = true;
                 box4 = xoro;
             }
-            
+
         }
         else if (number == 5) {
             if (box5 == '') {
                 increment = true;
                 box5 = xoro;
             }
-            
+
         }
         else if (number == 6) {
             if (box6 == '') {
                 increment = true;
                 box6 = xoro;
             }
-            
+
         }
         else if (number == 7) {
             if (box7 == '') {
                 increment = true;
                 box7 = xoro;
             }
-            
+
         }
         else if (number == 8) {
             if (box8 == '') {
                 increment = true;
                 box8 = xoro;
             }
-            
+
         }
         else if (number == 9) {
             if (box9 == '') {
                 increment = true;
                 box9 = xoro;
             }
-            
+
         }
         if (increment) {
             counter++;
         }
 
         this.setState((state) => {
-            return Object.assign({}, state, { box1, box2, box2, box3, box4, box5, box6, box7, box8, box9, counter });
+            return Object.assign({}, state, { box1, box2, box3, box4, box5, box6, box7, box8, box9, counter });
+        }, () => {
+            if (this.victory()) {
+                alert("victory")
+                this.reset();
+            }
         });
+
+        
+
     }
 
 
