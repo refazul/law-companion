@@ -7,94 +7,23 @@ class Sudoku extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
-            
-            box1: "", box2: "", box3: "", box4: "", box5: "", box6: "", box7: "", box8: "", box9: "",
-            box10: "", box11: "", box12: "", box13: "", box14: "", box15: "", box16: "", box17: "", box18: "",
-            box19: "", box20: "", box21: "", box22: "", box23: "", box24: "", box25: "", box26: "", box27: "",
+            box : [],
             selectednumber: "",
         }
-
     }
 
     numberSelect(number) {
-
-        var numberbox1 = this.state.numberbox1, numberbox2 = this.state.numberbox2, numberbox3 = this.state.numberbox3,
-            numberbox4 = this.state.numberbox4, numberbox5 = this.state.numberbox5, numberbox6 = this.state.numberbox6,
-            numberbox7 = this.state.numberbox7, numberbox8 = this.state.numberbox8, numberbox9 = this.state.numberbox9,
-            selectednumber;
-
-        selectednumber = this.state.selectednumber;
-
-        if (number == 1) {
-            selectednumber = "1";
-        }
-        else if (number == 2) {
-            selectednumber = "2";
-        }
-        else if (number == 3) {
-            selectednumber = "3";
-        }
-        else if (number == 4) {
-            selectednumber = "4";
-        }
-        else if (number == 5) {
-            selectednumber = "5";
-        }
-        else if (number == 6) {
-            selectednumber = "6";
-        }
-        else if (number == 7) {
-            selectednumber = "7";
-        }
-        else if (number == 8) {
-            selectednumber = "8";
-        }
-        else if (number == 9) {
-            selectednumber = "9";
-            console.log("9")
-        }
-        this.setState((state) => {
-            return Object.assign({}, state, {
-                numberbox1, numberbox2, numberbox3, numberbox4, numberbox5, numberbox6, numberbox7, numberbox8, numberbox9,
-                selectednumber,
-            });
-        }, () => {
-
-        });
+        this.setState({selectednumber: number});
     }
 
     boxOnClick(number) {
-        var box1 = this.state.box1, box2 = this.state.box2, box3 = this.state.box3, box4 = this.state.box4, box5 = this.state.box5, box6 = this.state.box6, box7 = this.state.box7, box8 = this.state.box8, box9 = this.state.box9,
-            box10 = this.state.box10, box11 = this.state.box11, box12 = this.state.box12, box13 = this.state.box13, box14 = this.state.box14, box15 = this.state.box15, box16 = this.state.box16, box17 = this.state.box17, box18 = this.state.box18,
-            box19 = this.state.box19, box20 = this.state.box20, box21 = this.state.box21, box22 = this.state.box22, box23 = this.state.box23, box24 = this.state.box24, box25 = this.state.box25, box26 = this.state.box26, box27 = this.state.box27;
+        var box = this.state.box;
+        var selectednumber = this.state.selectednumber;
 
-        
-        var xoro;
+        box[number] = selectednumber;
 
-        xoro = this.numberSelect.selectednumber;
-
-
-
-
-        this.setState((state) => {
-            return Object.assign({}, state, {
-                box1, box2, box3, box4, box5, box6, box7, box8, box9,
-                box10, box11, box12, box13, box14, box15, box16, box17, box18,
-                box19, box20, box21, box22, box23, box24, box25, box26, box27,
-            });
-        }, () => {
-
-        });
-
-
-
+        this.setState({box});
     }
-
-
-
-
-
 
     render() {
         return (
@@ -102,160 +31,160 @@ class Sudoku extends React.Component {
                 <div className="bigbox-row">
                     <div className="bigbox">
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(0) }}>{this.state.box[0]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box[1]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box[2]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box[3]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box[4]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box[5]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
-                        </div>
-                    </div>
-                    &nbsp;&nbsp;&nbsp;
-                    <div className="bigbox">
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box[6]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box[7]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box[8]}</div>
                         </div>
                     </div>
+                    
                     <div className="bigbox">
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box[9]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(10) }}>{this.state.box[10]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(11) }}>{this.state.box[11]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(12) }}>{this.state.box[12]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(13) }}>{this.state.box[13]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(14) }}>{this.state.box[14]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="bigbox-row">
-                    <div className="bigbox">
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(15) }}>{this.state.box[15]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(16) }}>{this.state.box[16]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(17) }}>{this.state.box[17]}</div>
                         </div>
                     </div>
                     <div className="bigbox">
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(18) }}>{this.state.box[18]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(19) }}>{this.state.box[19]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(20) }}>{this.state.box[20]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(21) }}>{this.state.box[21]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(22) }}>{this.state.box[22]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(23) }}>{this.state.box[23]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
-                        </div>
-                    </div>
-                    <div className="bigbox">
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(24) }}>{this.state.box[24]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(25) }}>{this.state.box[25]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(26) }}>{this.state.box[26]}</div>
                         </div>
                     </div>
                 </div>
                 <div className="bigbox-row">
                     <div className="bigbox">
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(27) }}>{this.state.box[27]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(28) }}>{this.state.box[28]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(29) }}>{this.state.box[29]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(30) }}>{this.state.box[30]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(31) }}>{this.state.box[31]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(32) }}>{this.state.box[32]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
-                        </div>
-                    </div>
-                    <div className="bigbox">
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
-                        </div>
-                        <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(33) }}>{this.state.box[33]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(34) }}>{this.state.box[34]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(35) }}>{this.state.box[35]}</div>
                         </div>
                     </div>
                     <div className="bigbox">
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(36) }}>{this.state.box[36]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(37) }}>{this.state.box[37]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(38) }}>{this.state.box[38]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(39) }}>{this.state.box[39]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(40) }}>{this.state.box[40]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(41) }}>{this.state.box[41]}</div>
                         </div>
                         <div className="box-row">
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                            <div className="smallbox" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(42) }}>{this.state.box[42]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(43) }}>{this.state.box[43]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(44) }}>{this.state.box[44]}</div>
+                        </div>
+                    </div>
+                    <div className="bigbox">
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(45) }}>{this.state.box[45]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(46) }}>{this.state.box[46]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(47) }}>{this.state.box[47]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(48) }}>{this.state.box[48]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(49) }}>{this.state.box[49]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(50) }}>{this.state.box[50]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(51) }}>{this.state.box[51]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(52) }}>{this.state.box[52]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(53) }}>{this.state.box[53]}</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="bigbox-row">
+                    <div className="bigbox">
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(54) }}>{this.state.box[54]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(55) }}>{this.state.box[55]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(56) }}>{this.state.box[56]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(57) }}>{this.state.box[57]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(58) }}>{this.state.box[58]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(59) }}>{this.state.box[59]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(60) }}>{this.state.box[60]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(61) }}>{this.state.box[61]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(62) }}>{this.state.box[62]}</div>
+                        </div>
+                    </div>
+                    <div className="bigbox">
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(63) }}>{this.state.box[63]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(64) }}>{this.state.box[64]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(65) }}>{this.state.box[65]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(66) }}>{this.state.box[66]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(67) }}>{this.state.box[67]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(68) }}>{this.state.box[68]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(69) }}>{this.state.box[69]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(70) }}>{this.state.box[70]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(71) }}>{this.state.box[71]}</div>
+                        </div>
+                    </div>
+                    <div className="bigbox">
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(72) }}>{this.state.box[72]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(73) }}>{this.state.box[73]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(74) }}>{this.state.box[74]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(75) }}>{this.state.box[75]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(76) }}>{this.state.box[76]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(77) }}>{this.state.box[77]}</div>
+                        </div>
+                        <div className="box-row">
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(78) }}>{this.state.box[78]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(79) }}>{this.state.box[79]}</div>
+                            <div className="smallbox" onClick={(e) => { this.boxOnClick(80) }}>{this.state.box[80]}</div>
                         </div>
                     </div>
                 </div>

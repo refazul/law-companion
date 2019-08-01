@@ -143,9 +143,6 @@ class Tictactoe extends React.Component {
                 this.reset();
             }
         });
-
-        
-
     }
 
 
