@@ -240,25 +240,46 @@ body{
     text-align: center;
     cursor: pointer;
 }
-.smallbox{
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    border: 1px solid black;
-    float: left;
-    text-align: center;
-    cursor: pointer;
-}
 
-.bigbox{
-    float: left;
-    border: 1px solid white;
+.sudoku {
+    .smallbox{
+        width: 50px;
+        height: 50px;
+        background-color: beige;
+        border: 1px solid black;
+        float: left;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .b_right{
+        border-right-color: white;
+    }
+    .b_bottom{
+        border-bottom-color: white;
+    }
+    .b_top{
+        border-top-color: white;
+    }
+    .b_left{
+        border-left-color: white;
+    }
+    .correct {
+        background-color: green;
+    }
+    .incorrect {
+        background-color: red;
+    }
+    .solutionbox {
+        background-color: gray;
+        color: black;
+    }
 }
 
 .numberbox{
     width: 25px;
     height: 25px;
-    background-color: green;
+    background-color: white;
     border: 1px solid black;
     float: left;
     text-align: center;

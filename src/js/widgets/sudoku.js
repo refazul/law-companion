@@ -60,6 +60,39 @@ class Sudoku extends React.Component {
     getNumber(index) {
         return this.state.mask[index] == 1 ? this.state.solution[index] : this.state.box[index];
     }
+    getClass(index) {
+        var row = Math.floor(index / 9);
+        var c = "smallbox ";
+        if (index % 9 == 0) {
+            c += " clear ";
+        }
+        if (index % 3 == 2) {
+            c += " b_right ";
+        } else if (index % 3 == 0) {
+            c += " b_left ";
+        }
+
+        if (row % 3 == 2) {
+            c += " b_bottom ";
+        } else if (row % 3 == 0) {
+            c += " b_top ";
+        }
+        if (this.state.mask[index] == 1) {
+            c += " solutionbox ";
+        } else {
+            if (!(this.state.box[index] > 0)) {
+                
+            }
+            else if (this.state.solution[index] == this.state.box[index]) {
+                c += " correct ";
+            } else {
+                c += " incorrect ";
+            }
+        }
+
+        
+        return c;
+    }
 
     render() {
         return (
@@ -67,14 +100,10 @@ class Sudoku extends React.Component {
                 <div className="sudoku">
                     {
                         this.state.solution.map((item, index) => {
-                            var c = "smallbox";
-                            if (index % 9 == 0) {
-                                c += " clear";
-                            }
-                            return <div className={c} onClick={(e) => { this.boxOnClick(index); }}>{this.getNumber(index)}</div>
+                            return <div className={this.getClass(index)} onClick={(e) => { this.boxOnClick(index); }}>{this.getNumber(index)}</div>
                         })
                     }
-                    
+
                 </div>
 
                 <div>
