@@ -33,6 +33,7 @@ module.exports = {
 
             'accordion': path.resolve(__dirname, 'src', 'js', 'widgets', 'accordion.js'),
             'tictactoe': path.resolve(__dirname, 'src', 'js', 'widgets', 'tictactoe.js'),
+            'sudoku': path.resolve(__dirname, 'src', 'js', 'widgets', 'sudoku.js'),
         }
     }
 };
