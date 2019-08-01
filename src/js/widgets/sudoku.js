@@ -28,16 +28,30 @@ class Sudoku extends React.Component {
     }
     getMask() {
         return [
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1,
-            0, 1, 1, 0, 1, 0, 1, 0, 1
+            0, 1, 1, 1, 1, 1, 1, 1, 1,
+            0, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
         ]
+    }
+
+    isVictory() {
+        for (var i = 0; i < 81; i++) {
+            if (this.state.mask[i] == 1) {
+                continue;
+            }
+            if (this.state.mask[i] == 0 && this.state.box[i] == this.state.solution[i]) {
+                // Good
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 
     numberSelect(number) {
@@ -52,6 +66,10 @@ class Sudoku extends React.Component {
         if (mask[index] == 0) {
             // 0 means mutable
             box[index] = selectednumber;
+        }
+
+        if (this.isVictory()) {
+            alert('victor');
         }
 
         this.setState({ box });
@@ -81,7 +99,7 @@ class Sudoku extends React.Component {
             c += " solutionbox ";
         } else {
             if (!(this.state.box[index] > 0)) {
-                
+
             }
             else if (this.state.solution[index] == this.state.box[index]) {
                 c += " correct ";
@@ -89,7 +107,6 @@ class Sudoku extends React.Component {
                 c += " incorrect ";
             }
         }
-
         
         return c;
     }
