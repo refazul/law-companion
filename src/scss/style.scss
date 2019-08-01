@@ -14,6 +14,10 @@ body{
     text-decoration: none;
     }
 }
+
+.clear {
+    clear: both;
+}
 .tablecell{
     display: table-cell;
 }
@@ -236,9 +240,6 @@ body{
     text-align: center;
     cursor: pointer;
 }
-.box-row{
-    clear: both;
-}
 .smallbox{
     width: 50px;
     height: 50px;
@@ -252,9 +253,6 @@ body{
 .bigbox{
     float: left;
     border: 1px solid white;
-}
-.bigbox-row{
-    clear: both;
 }
 
 .numberbox{
