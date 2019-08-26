@@ -11,9 +11,11 @@ import Footer from 'footer';
 import Topbanner from 'topbanner';
 import Tictactoe from 'tictactoe';
 import Sudoku from 'sudoku';
+import Accordion from 'accordion';
 
 
-import { navbar_data, sidebar1_data, causelist_data, sidebar2_data, sidebar3_data, footer_data } from './data';
+
+import { navbar_data, sidebar1_data, causelist_data, sidebar2_data, sidebar3_data, footer_data, accordion_items_data } from './data';
 
 class Home extends React.Component {
     constructor(props) {
@@ -29,14 +31,15 @@ class Home extends React.Component {
                     <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
                 {/*<Tictactoe/>*/}
-                
-                <div className="container"> 
+
+                <div className="container">
                     <div className="row">
                         <div className="mainbar-wrapper">
-                            <Topbanner m={this}/>
+                            <Topbanner m={this} />
                             {/*<Sudoku/>*/}
                             <div className="center causelist-wrapper">
-                                <Causelist {...causelist_data} />
+                                
+                                <Accordion {...accordion_items_data} />
                             </div>
                         </div>
                         <div className="sidebar-wrapper">
@@ -58,10 +61,10 @@ class Home extends React.Component {
                     </div>
                     <div className="footer-wrapper">
                         <Footer {...footer_data} />
-                        
+
                     </div>
                 </div>
-                
+
             </div>
         )
     }

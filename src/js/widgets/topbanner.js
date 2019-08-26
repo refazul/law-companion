@@ -24,6 +24,7 @@ class Topbanner extends React.Component {
                     <div>Good Morning Khaled</div>
                     <div>Today is Tuesday, 09 July,2019</div>
                     <div>Here is your cause list today.</div>
+                    <div>Tap on a case number to add/view details.</div>
                 </div>
                 <div className="col-sm-3 col-md-3 col-lg-3">
                     <div className="textright">

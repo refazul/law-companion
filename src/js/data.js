@@ -42,6 +42,127 @@ export const sortby_data = {
 
     ]
 }
+
+export const accordion_items_data = {
+    'items': [
+        {
+            
+            'item_number'       : 'ITEM NO.',
+            'case_number'       : 'CASE NO.',
+            'parties'       : 'PARTIES',
+            'court_number'     : 'COURT NO.',
+            'heading'      : 'HEADING',
+            'for'      : 'FOR',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse1',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse2',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse3',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse4',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse5',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+        {
+            'id'          : 'collapse6',
+            'item_number'       : '73',
+            'case_number'       : 'WRIT PETITION 578/2019',
+            'parties'       : 'GOLAM MAOLA VS Govt of Bangladesh',
+            'court_number'     : 'Annex 33',
+            'heading'      : 'Motion',
+            'for'      : 'For',
+            
+    
+    
+        },
+
+    ]
+}
+
+export const accordion_dropdown1_data = {
+    "dropdowntext": "Rule & Stay",
+    'items': [
+        {
+            'text': 'Rule & Stay',
+        },
+        {
+            'text': 'Rule & Stay',
+        },
+        {
+            'text': 'Rule & Stay',
+        },
+
+    ]
+}
+export const accordion_dropdown2_data = {
+    "dropdowntext": "6 Months",
+    'items': [
+        {
+            'text': '3 Months',
+        },
+        {
+            'text': '6 Months',
+        },
+        {
+            'text': '12 Months',
+        },
+
+    ]
+}
 export const causelist_data = {
     "dropdowntext": "Sort by: Item No.",
     'items': [
