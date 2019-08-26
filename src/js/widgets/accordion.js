@@ -59,6 +59,7 @@ const Accordionitem = (props) => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
@@ -68,8 +69,17 @@ const Accordion = (props) => {
         <Accordionitem {...item} />
     );
     return (
-        <div className="accordion" id="accordionExample">
-            {accordion_items}
+        <div>
+            <div className="accordion" id="accordionExample">
+                {accordion_items}
+            </div>
+            <div className="floatright">
+                <button type="button" class="btn btn-info floatright"><i class="fas fa-print"></i>&nbsp;&nbsp;Print Cause List</button>
+            </div>
+            <div className="floatleft">
+                <div>Total 9 cases found</div>
+                <div>Cause list generated</div>
+            </div>
         </div>
     );
 }

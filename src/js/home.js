@@ -52,11 +52,7 @@ class Home extends React.Component {
 
                     </div>
                     <div>
-                        <div className="floatright">
-                            <button type="button" class="btn btn-info floatright"><i class="fas fa-print"></i>&nbsp;&nbsp;Print Case List</button>
-                        </div>
-                        <div>Total 9 cases found</div>
-                        <div>Cause list generated</div>
+                        
 
                     </div>
                     <div className="footer-wrapper">
