@@ -32,6 +32,7 @@ module.exports = {
             'topbanner': path.resolve(__dirname, 'src', 'js', 'widgets', 'topbanner.js'),
 
             'accordion': path.resolve(__dirname, 'src', 'js', 'widgets', 'accordion.js'),
+            'accordionitem': path.resolve(__dirname, 'src', 'js', 'widgets', 'accordionitem.js'),
             'tictactoe': path.resolve(__dirname, 'src', 'js', 'widgets', 'tictactoe.js'),
             'sudoku': path.resolve(__dirname, 'src', 'js', 'widgets', 'sudoku.js'),
         }

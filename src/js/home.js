@@ -28,13 +28,13 @@ class Home extends React.Component {
                 <div className="header">
                     <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
-                <Tictactoe/>
+                {/*<Tictactoe/>*/}
                 
                 <div className="container"> 
                     <div className="row">
                         <div className="mainbar-wrapper">
                             <Topbanner m={this}/>
-                            <Sudoku/>
+                            {/*<Sudoku/>*/}
                             <div className="center causelist-wrapper">
                                 <Causelist {...causelist_data} />
                             </div>
