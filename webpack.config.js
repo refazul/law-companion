@@ -25,9 +25,9 @@ module.exports = {
             'dropdown': path.resolve(__dirname, 'src', 'js', 'widgets', 'dropdown.js'),
             'navbar': path.resolve(__dirname, 'src', 'js', 'widgets', 'navbar.js'),
             'causelist': path.resolve(__dirname, 'src', 'js', 'widgets', 'causelist.js'),
-            'quicklink': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink.js'),
-            'quicklink2': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink2.js'),
-            'quicklink3': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicklink3.js'),
+            'quickview': path.resolve(__dirname, 'src', 'js', 'widgets', 'quickview.js'),
+            'extension': path.resolve(__dirname, 'src', 'js', 'widgets', 'extension.js'),
+            'quicknote': path.resolve(__dirname, 'src', 'js', 'widgets', 'quicknote.js'),
             'footer': path.resolve(__dirname, 'src', 'js', 'widgets', 'footer.js'),
             'topbanner': path.resolve(__dirname, 'src', 'js', 'widgets', 'topbanner.js'),
 

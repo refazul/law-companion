@@ -5,8 +5,8 @@ const Dropdown = (props) => {
         <a className={"dropdown-item " + (item.border_bottom == 'yes' ? " dropdown-item-border " : "") + (item.font_bold == 'yes' ? " dropdown-item-bold " : "") + (item.text_inverse == 'yes' ? " dropdown-item-inverse " : "")} href="#">{item.text}</a>
     );
     return (
-        < div class="dropdown" >
-            <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        < div class="dropdown " >
+            <button class="btn btn-secondary dropdown-toggle dropdown-button sort_dropdown_button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {props.dropdowntext}
                 {/*<i class="fas fa-chevron-down"></i>*/}
             </button>

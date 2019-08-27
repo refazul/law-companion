@@ -4,9 +4,9 @@ import React from 'react';
 import Navbar from 'navbar';
 import Dropdown from 'dropdown';
 import Causelist from 'causelist';
-import Quicklink from 'quicklink';
-import Quicklink2 from 'quicklink2';
-import Quicklink3 from 'quicklink3';
+import Quickview from 'quickview';
+import Extension from 'extension';
+import Quicknote from 'quicknote';
 import Footer from 'footer';
 import Topbanner from 'topbanner';
 import Tictactoe from 'tictactoe';
@@ -44,9 +44,8 @@ class Home extends React.Component {
                         </div>
                         <div className="sidebar-wrapper">
                             <div>
-                                <Quicklink {...sidebar1_data} />
-                                <Quicklink2 {...sidebar2_data} />
-                                <Quicklink3 {...sidebar3_data} />
+                                <Quickview {...sidebar1_data} />
+                                <Extension {...sidebar2_data} />
                             </div>
                         </div>
 
@@ -55,7 +54,7 @@ class Home extends React.Component {
                         
 
                     </div>
-                    <div className="footer-wrapper">
+                    <div className="footer-wrapper margin_bottom_twenty">
                         <Footer {...footer_data} />
 
                     </div>

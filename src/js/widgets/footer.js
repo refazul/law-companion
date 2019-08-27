@@ -14,7 +14,7 @@ const Footer = (props) => {
         <Footeritem {...item} />
     );
     return (
-        <div className="footer">
+        <div className="footer ">
             <div className="row">
                 {listItems}
 

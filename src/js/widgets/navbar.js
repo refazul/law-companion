@@ -32,7 +32,7 @@ const Navbar = (props) => {
         <Navbaritem {...item} />
     );
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark padding_top_ten padding_bottom_ten">
             <a class="navbar-brand" href="#">{props.title}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -53,6 +53,7 @@ export const accordion_items_data = {
             'court_number'     : 'COURT NO.',
             'heading'      : 'HEADING',
             'for'      : 'FOR',
+            'type': 'header',
             
     
     
@@ -65,6 +66,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
+            'type': 'accordionitem',
             
     
     
@@ -77,7 +79,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
-            
+            'type': 'accordionitem',
     
     
         },
@@ -89,7 +91,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
-            
+            'type': 'accordionitem',
     
     
         },
@@ -101,7 +103,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
-            
+            'type': 'accordionitem',
     
     
         },
@@ -113,7 +115,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
-            
+            'type': 'accordionitem',
     
     
         },
@@ -125,7 +127,7 @@ export const accordion_items_data = {
             'court_number'     : 'Annex 33',
             'heading'      : 'Motion',
             'for'      : 'For',
-            
+            'type': 'accordionitem',
     
     
         },

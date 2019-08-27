@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const Quicklink3 = () => {
+const Quicknote = () => {
 
     return (
         <div className="sidebaritem-wrapper quicklink3-wrapper" style={{ border: "1px solid lightgray" }}>
@@ -14,7 +14,7 @@ const Quicklink3 = () => {
                 <div className="quicklink3form">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write a quick note" />
                 </div>
-                <button type="button" className="btn btn-info quicklink3-button">Save</button>
+                <button type="button" className="btn btn-info quicklink3-button all_buttons">Save</button>
             </div>
         </div>
 
@@ -22,4 +22,4 @@ const Quicklink3 = () => {
     );
 }
 
-export default Quicklink3;
+export default Quicknote;

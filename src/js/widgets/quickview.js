@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Quicklinkitem = (props) => {
+const Quickviewitem = (props) => {
     return (
         <div className={(props.lastitem == "yes" ? " lastitem-style " : "") + " quicklinkitem-wrapper"}>
             <div className={"inline " + props.circle}>
@@ -20,9 +20,9 @@ const Quicklinkitem = (props) => {
     );
 }
 
-const Quicklink = (props) => {
+const Quickview = (props) => {
     const listItems = props.items.map((item, index, array) =>
-        <Quicklinkitem {...item} lastitem={index == array.length - 1 ? "yes" : "no"} />
+        <Quickviewitem {...item} lastitem={index == array.length - 1 ? "yes" : "no"} />
 
     );
 
@@ -39,4 +39,4 @@ const Quicklink = (props) => {
     );
 }
 
-export default Quicklink;
+export default Quickview;
