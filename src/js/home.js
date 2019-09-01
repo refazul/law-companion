@@ -12,6 +12,9 @@ import Topbanner from 'topbanner';
 import Tictactoe from 'tictactoe';
 import Sudoku from 'sudoku';
 import Accordion from 'accordion';
+import Fox from './widgets/fox';
+
+
 
 
 
@@ -30,13 +33,13 @@ class Home extends React.Component {
                 <div className="header">
                     <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
-                <Tictactoe/>
-
+                {/*<Tictactoe/>*/}
+                <Fox/>
                 <div className="container">
                     <div className="row">
                         <div className="mainbar-wrapper">
                             <Topbanner m={this} />
-                            <Sudoku/>
+                            {/*<Sudoku/>*/}
                             <div className="center causelist-wrapper">
                                 
                                 <Accordion {...accordion_items_data} />
