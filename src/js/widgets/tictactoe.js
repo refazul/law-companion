@@ -1,174 +1,88 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-
-
-
-class Tictactoe extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            counter: 0,
-            box1: "",
-            box2: "",
-            box3: "",
-            box4: "",
-            box5: "",
-            box6: "",
-            box7: "",
-            box8: "",
-            box9: "",
+export default function Tictactoe () {
+    useEffect(() => {
+    // Update the document title using the browser API
+        document.title = `You clicked ${counter} times`;
+        console.log({box1, box2, box3, box4, box5, box6, box7, box8, box9, counter, xoro});
+        if(victory()){
+            alert("wins")
         }
+    });
 
+    const [counter, setCounter] = useState(0);
+    const [xoro, setXorO] = useState('X');
+    const [box1, setBox1] = useState('');
+    const [box2, setBox2] = useState('');
+    const [box3, setBox3] = useState('');
+    const [box4, setBox4] = useState('');
+    const [box5, setBox5] = useState('');
+    const [box6, setBox6] = useState('');
+    const [box7, setBox7] = useState('');
+    const [box8, setBox8] = useState('');
+    const [box9, setBox9] = useState('');
+
+    function boxOnclick(box, callback) {
+        
+        if (box == '') {
+            setCounter(counter + 1);
+            if (counter % 2 == 0) {
+                setXorO('O');
+            } else {
+                setXorO('X');
+            }
+            
+            callback(xoro);
+        }
+        
     }
-    reset() {
-        var box1, box2, box3, box4, box5, box5, box6, box7, box8, box9;
-        box1 = box2 = box3 = box4 = box5 = box5 = box6 = box7 = box8 = box9 = "";
-        var counter = 0;
-        this.setState((state) => {
-            return Object.assign({}, state, { box1, box2, box3, box4, box5, box6, box7, box8, box9, counter });
-        });
-    }
 
-    victory() {
-        if (this.state.box1 != '' && this.state.box1 == this.state.box2 && this.state.box1 == this.state.box3) {
+    function victory() {
+        if (box1 != '' && box1 == box2 && box1 == box3) {
             return true;
         }
-        if (this.state.box4 != '' && this.state.box4 == this.state.box5 && this.state.box4 == this.state.box6) {
+        if (box4 != '' && box4 == box5 && box4 == box6) {
             return true;
         }
-        if (this.state.box7 != '' && this.state.box7 == this.state.box8 && this.state.box7 == this.state.box9) {
+        if (box7 != '' && box7 == box8 && box7 == box9) {
             return true;
         }
-        if (this.state.box1 != '' && this.state.box1 == this.state.box4 && this.state.box1 == this.state.box7) {
+        if (box1 != '' && box1 == box4 && box1 == box7) {
             return true;
         }
-        if (this.state.box2 != '' && this.state.box2 == this.state.box5 && this.state.box2 == this.state.box8) {
+        if (box2 != '' && box2 == box5 && box2 == box8) {
             return true;
         }
-        if (this.state.box3 != '' && this.state.box3 == this.state.box6 && this.state.box3 == this.state.box9) {
+        if (box3 != '' && box3 == box6 && box3 == box9) {
             return true;
         }
-        if (this.state.box1 != '' && this.state.box1 == this.state.box5 && this.state.box1 == this.state.box9) {
+        if (box1 != '' && box1 == box5 && box1 == box9) {
             return true;
         }
-        if (this.state.box3 != '' && this.state.box3 == this.state.box5 && this.state.box3 == this.state.box7) {
+        if (box3 != '' && box3 == box5 && box3 == box7) {
             return true;
         }
         return false;
     }
-    boxOnClick(number) {
-        var box1 = this.state.box1, box2 = this.state.box2, box3 = this.state.box3,
-            box4 = this.state.box4, box5 = this.state.box5, box6 = this.state.box6,
-            box7 = this.state.box7, box8 = this.state.box8, box9 = this.state.box9;
-        var counter = this.state.counter;
-        var increment = false;
-        var xoro = "X";
 
-        if (counter % 2 == 1) {
-            xoro = "O";
-        }
-
-
-        if (number == 1) {
-            if (box1 == '') {
-                increment = true;
-                box1 = xoro;
-            }
-
-        } else if (number == 2) {
-            if (box2 == '') {
-                increment = true;
-                box2 = xoro;
-            }
-
-        }
-        else if (number == 3) {
-            if (box3 == '') {
-                increment = true;
-                box3 = xoro;
-            }
-
-        }
-        else if (number == 4) {
-            if (box4 == '') {
-                increment = true;
-                box4 = xoro;
-            }
-
-        }
-        else if (number == 5) {
-            if (box5 == '') {
-                increment = true;
-                box5 = xoro;
-            }
-
-        }
-        else if (number == 6) {
-            if (box6 == '') {
-                increment = true;
-                box6 = xoro;
-            }
-
-        }
-        else if (number == 7) {
-            if (box7 == '') {
-                increment = true;
-                box7 = xoro;
-            }
-
-        }
-        else if (number == 8) {
-            if (box8 == '') {
-                increment = true;
-                box8 = xoro;
-            }
-
-        }
-        else if (number == 9) {
-            if (box9 == '') {
-                increment = true;
-                box9 = xoro;
-            }
-
-        }
-        if (increment) {
-            counter++;
-        }
-
-        this.setState((state) => {
-            return Object.assign({}, state, { box1, box2, box3, box4, box5, box6, box7, box8, box9, counter });
-        }, () => {
-            if (this.victory()) {
-                alert("victory")
-                this.reset();
-            }
-        });
-    }
-
-
-
-    render() {
-        return (
-            <div>
-                <div className="box-row">
-                    <div className="box" onClick={(e) => { this.boxOnClick(1) }}>{this.state.box1}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(2) }}>{this.state.box2}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(3) }}>{this.state.box3}</div>
-                </div>
-                <div className="box-row">
-                    <div className="box" onClick={(e) => { this.boxOnClick(4) }}>{this.state.box4}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(5) }}>{this.state.box5}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(6) }}>{this.state.box6}</div>
-                </div>
-                <div className="box-row">
-                    <div className="box" onClick={(e) => { this.boxOnClick(7) }}>{this.state.box7}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(8) }}>{this.state.box8}</div>
-                    <div className="box" onClick={(e) => { this.boxOnClick(9) }}>{this.state.box9}</div>
-                </div>
+    return (
+        <div>
+            <div>{counter}</div>
+            <div className="box-row">
+                <div className="box" onClick={(e) => { boxOnclick(box1, setBox1); }}>{box1}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box2, setBox2); }}>{box2}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box3, setBox3); }}>{box3}</div>
             </div>
-        )
-    }
+            <div className="box-row">
+                <div className="box" onClick={(e) => { boxOnclick(box4, setBox4); }}>{box4}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box5, setBox5); }}>{box5}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box6, setBox6); }}>{box6}</div>
+            </div>
+            <div className="box-row">
+                <div className="box" onClick={(e) => { boxOnclick(box7, setBox7); }}>{box7}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box8, setBox8); }}>{box8}</div>
+                <div className="box" onClick={(e) => { boxOnclick(box9, setBox9); }}>{box9}</div>
+            </div>
+        </div>
+    )    
 }
-
-
-export default Tictactoe;

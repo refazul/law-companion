@@ -331,8 +331,11 @@ body{
     float: left;
     text-align: center;
     cursor: pointer;
+    user-select: none;
 }
-
+.box-row {
+    clear: both;
+}
 .sudoku {
     .smallbox{
         width: 50px;
