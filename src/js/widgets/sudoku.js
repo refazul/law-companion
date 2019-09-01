@@ -1,19 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-class Sudoku extends React.Component {
-    constructor(props) {
-        super(props);
-        var solution = this.generateSolution();
-        var mask = this.getMask();
-        this.state = {
-            solution: solution,
-            box: [],
-            mask: mask,
-            selectednumber: "",
-        }
-    }
+export default function Sudoku() {
+    const [box, setBox] = useState({});
+    const [solution, setSolution] = useState(generateSolution());
+    const [mask, setMask] = useState(getMask());
+    const [number, setNumber] = useState(1);
 
-    generateSolution() {
+    useEffect(() => {
+        // Update the document title using the browser API
+            console.log({box, number});
+            if(isVictory()){
+                alert("wins")
+            }
+        });
+
+    function generateSolution() {
         return [
             4, 3, 5, 2, 6, 9, 7, 8, 1,
             6, 8, 2, 5, 7, 1, 4, 9, 3,
@@ -26,7 +27,7 @@ class Sudoku extends React.Component {
             7, 6, 3, 4, 1, 8, 2, 5, 9
         ]
     }
-    getMask() {
+    function getMask() {
         return [
             0, 1, 1, 1, 1, 1, 1, 1, 1,
             0, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -40,12 +41,12 @@ class Sudoku extends React.Component {
         ]
     }
 
-    isVictory() {
+    function isVictory() {
         for (var i = 0; i < 81; i++) {
-            if (this.state.mask[i] == 1) {
+            if (mask[i] == 1) {
                 continue;
             }
-            if (this.state.mask[i] == 0 && this.state.box[i] == this.state.solution[i]) {
+            if (mask[i] == 0 && box[i] == solution[i]) {
                 // Good
             } else {
                 return false;
@@ -54,31 +55,19 @@ class Sudoku extends React.Component {
         return true;
     }
 
-    numberSelect(number) {
-        this.setState({ selectednumber: number });
-    }
-
-    boxOnClick(index) {
-        var box = this.state.box;
-        var mask = this.state.mask;
-        var selectednumber = this.state.selectednumber;
-
+    function boxOnClick(index) {
         if (mask[index] == 0) {
             // 0 means mutable
-            box[index] = selectednumber;
+            box[index] = number;
         }
-
-        if (this.isVictory()) {
-            alert('victor');
-        }
-
-        this.setState({ box });
+        setBox(Object.assign({}, box));
     }
 
-    getNumber(index) {
-        return this.state.mask[index] == 1 ? this.state.solution[index] : this.state.box[index];
+    function getNumber(index) {
+        return mask[index] == 1 ? solution[index] : box[index];
     }
-    getClass(index) {
+
+    function getClass(index) {
         var row = Math.floor(index / 9);
         var c = "smallbox ";
         if (index % 9 == 0) {
@@ -95,13 +84,13 @@ class Sudoku extends React.Component {
         } else if (row % 3 == 0) {
             c += " b_top ";
         }
-        if (this.state.mask[index] == 1) {
+        if (mask[index] == 1) {
             c += " solutionbox ";
         } else {
-            if (!(this.state.box[index] > 0)) {
+            if (!(box[index] > 0)) {
 
             }
-            else if (this.state.solution[index] == this.state.box[index]) {
+            else if (solution[index] == box[index]) {
                 c += " correct ";
             } else {
                 c += " incorrect ";
@@ -111,39 +100,34 @@ class Sudoku extends React.Component {
         return c;
     }
 
-    render() {
-        return (
+    return (
+        <div>
+            <div className="sudoku">
+                {
+                    solution.map((item, index) => {
+                        return <div className={getClass(index)} onClick={(e) => { boxOnClick(index); }}>{getNumber(index)}</div>
+                    })
+                }
+
+            </div>
+
             <div>
-                <div className="sudoku">
-                    {
-                        this.state.solution.map((item, index) => {
-                            return <div className={this.getClass(index)} onClick={(e) => { this.boxOnClick(index); }}>{this.getNumber(index)}</div>
-                        })
-                    }
-
+                <div className="number-row">
+                    <div className="numberbox" onClick={(e) => { setNumber(1) }}>1</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(2) }}>2</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(3) }}>3</div>
                 </div>
-
-                <div>
-                    <div className="number-row">
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(1) }}>1</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(2) }}>2</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(3) }}>3</div>
-                    </div>
-                    <div className="number-row">
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(4) }}>4</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(5) }}>5</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(6) }}>6</div>
-                    </div>
-                    <div className="number-row">
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(7) }}>7</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(8) }}>8</div>
-                        <div className="numberbox" onClick={(e) => { this.numberSelect(9) }}>9</div>
-                    </div>
+                <div className="number-row">
+                    <div className="numberbox" onClick={(e) => { setNumber(4) }}>4</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(5) }}>5</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(6) }}>6</div>
+                </div>
+                <div className="number-row">
+                    <div className="numberbox" onClick={(e) => { setNumber(7) }}>7</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(8) }}>8</div>
+                    <div className="numberbox" onClick={(e) => { setNumber(9) }}>9</div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
-
-
-export default Sudoku;

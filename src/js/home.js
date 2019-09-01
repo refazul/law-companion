@@ -36,7 +36,7 @@ class Home extends React.Component {
                     <div className="row">
                         <div className="mainbar-wrapper">
                             <Topbanner m={this} />
-                            {/*<Sudoku/>*/}
+                            <Sudoku/>
                             <div className="center causelist-wrapper">
                                 
                                 <Accordion {...accordion_items_data} />
