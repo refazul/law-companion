@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"compilecss": "sass --watch src/scss/style.scss:public/css/style.css",
+		"compilecss": "sass --watch src/scss/style.scss:public/css/style.css --watch",
 		"compilejs": "webpack --watch",
 		"server": "nodemon server.js"
 	},

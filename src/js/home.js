@@ -33,15 +33,11 @@ class Home extends React.Component {
                 <div className="header">
                     <Navbar {...navbar_data} xyz={this.state.toptext} />
                 </div>
-                {/*<Tictactoe/>*/}
-                <Fox/>
                 <div className="container">
                     <div className="row">
                         <div className="mainbar-wrapper">
                             <Topbanner m={this} />
-                            {/*<Sudoku/>*/}
                             <div className="center causelist-wrapper">
-                                
                                 <Accordion {...accordion_items_data} />
                             </div>
                         </div>
